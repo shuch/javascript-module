@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<script type="text/javascript">
+  var myGradeCalculate = (function () {
+    var myGrades = [93, 52, 88, 0, 55];
+
+    return {
+      average: function() {
+        var total = myGrades.reduce(function(accumulator, item) {
+          return accumulator + item
+        }, 0);
+        return 'Your average grade is ' + total / myGrades.length + '.'; 
+      },
+    };
+  })();
+
+  myGradeCalculate.average();
+
+
+</script>
+</body>
+</html>

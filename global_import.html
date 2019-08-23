@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <script type="text/javascript">
+    (function (globalVariable) {
+      // keep this variables private inside this closure scope
+
+      var privateFunction = function() {
+        console.log('Shhh, this is private!');
+      }
+
+      globalVariable.each = function(collection, iterator) {
+        if (Array.isArray(collection)) {
+          for (var i = 0; i < collection.length; i++) {
+            iterator(collection[i], i, collection);
+          }
+        } else {
+          for (var key in collection) {
+            iterator(collection[key], key, collection);
+          }
+        }
+      };
+    }(globalVariable));
+
+    var arr = [0, 1, 2];
+    arr.
+  </script>
+  
+</body>
+</html>
